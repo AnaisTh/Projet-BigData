@@ -1,0 +1,107 @@
+Etat,payment_type,nombreUtilisation
+Acre,debit_card,2
+Acre,voucher,5
+Acre,boleto,16
+Acre,credit_card,61
+Alagoas,debit_card,5
+Alagoas,voucher,13
+Alagoas,boleto,68
+Alagoas,credit_card,341
+Amapá,voucher,3
+Amapá,boleto,20
+Amapá,credit_card,47
+Amazonas,boleto,21
+Amazonas,debit_card,2
+Amazonas,voucher,7
+Amazonas,credit_card,124
+Bahia,voucher,281
+Bahia,credit_card,2662
+Bahia,boleto,614
+Bahia,debit_card,53
+Ceará,credit_card,1091
+Ceará,voucher,82
+Ceará,boleto,205
+Ceará,debit_card,20
+District fédéral,voucher,91
+District fédéral,boleto,396
+District fédéral,debit_card,17
+District fédéral,credit_card,1700
+Espírito Santo,boleto,403
+Espírito Santo,credit_card,1573
+Espírito Santo,debit_card,27
+Espírito Santo,voucher,104
+Goiás,credit_card,1520
+Goiás,voucher,121
+Goiás,boleto,449
+Goiás,debit_card,22
+Maranhão,credit_card,535
+Maranhão,voucher,25
+Maranhão,debit_card,4
+Maranhão,boleto,203
+Mato Grosso,boleto,238
+Mato Grosso,voucher,55
+Mato Grosso,debit_card,6
+Mato Grosso,credit_card,659
+Mato Grosso do Sul,debit_card,11
+Mato Grosso do Sul,boleto,175
+Mato Grosso do Sul,voucher,31
+Mato Grosso do Sul,credit_card,519
+Minas Gerais,voucher,589
+Minas Gerais,boleto,2304
+Minas Gerais,debit_card,139
+Minas Gerais,credit_card,9070
+Paraná,boleto,1118
+Paraná,credit_card,3786
+Paraná,debit_card,75
+Paraná,voucher,283
+Paraïba,voucher,36
+Paraïba,boleto,93
+Paraïba,credit_card,428
+Paraïba,debit_card,13
+Pará,credit_card,728
+Pará,debit_card,16
+Pará,boleto,215
+Pará,voucher,52
+Pernambuco,credit_card,1334
+Pernambuco,debit_card,19
+Pernambuco,boleto,277
+Pernambuco,voucher,98
+Piauí,voucher,30
+Piauí,credit_card,389
+Piauí,debit_card,11
+Piauí,boleto,94
+Rio Grande do Norte,credit_card,394
+Rio Grande do Norte,debit_card,9
+Rio Grande do Norte,boleto,80
+Rio Grande do Norte,voucher,39
+Rio Grande do Sul,boleto,1359
+Rio Grande do Sul,voucher,248
+Rio Grande do Sul,debit_card,76
+Rio Grande do Sul,credit_card,3985
+Rio de Janeiro,boleto,2163
+Rio de Janeiro,credit_card,10288
+Rio de Janeiro,voucher,891
+Rio de Janeiro,debit_card,185
+Rondônia,boleto,64
+Rondônia,credit_card,186
+Rondônia,voucher,8
+Rondônia,debit_card,3
+Roraima,boleto,13
+Roraima,credit_card,33
+Santa Catarina,credit_card,2713
+Santa Catarina,debit_card,46
+Santa Catarina,boleto,840
+Santa Catarina,voucher,155
+Sergipe,credit_card,264
+Sergipe,voucher,17
+Sergipe,debit_card,5
+Sergipe,boleto,75
+São Paulo,debit_card,759
+São Paulo,credit_card,32168
+São Paulo,boleto,8205
+São Paulo,voucher,2487
+São Paulo,not_defined,3
+Tocantins,voucher,24
+Tocantins,boleto,76
+Tocantins,debit_card,4
+Tocantins,credit_card,197

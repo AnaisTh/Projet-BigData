@@ -1,0 +1,19 @@
+fichier,temps (sec)
+nbCommandesParVille.csv,38
+nbCommandesParEtat.csv,10
+infosGeneralesCommandes.csv,15
+infosGeneralesCommandesEtats.csv,20
+infosGeneralesCommandesVilles.csv,32
+nbProduitsCategories.csv,15
+noteMoyenne.csv,8
+noteMoyenneEtat.csv,12
+noteMoyenneCategorieProduit.csv,20
+nbVendeursParVille.csv,13
+nbVendeursParEtat.csv,6
+localisationVilles.csv,136
+nbUtilisationModePaiement.csv,12
+nbUtilisationModePaiementEtat.csv,9
+nbVersementsMoyen.csv,6
+nbVersementsMoyenMode.csv,11
+nbVersementMoyenEtat.csv,12
+nbVersementMoyenEtatCarte.csv,10

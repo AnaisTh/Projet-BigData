@@ -1,0 +1,468 @@
+Ville,nbCommandes
+sao paulo,15540
+rio de janeiro,6882
+belo horizonte,2773
+brasilia,2131
+curitiba,1521
+campinas,1444
+porto alegre,1379
+salvador,1245
+guarulhos,1189
+sao bernardo do campo,938
+niteroi,849
+santo andre,797
+osasco,746
+santos,713
+goiania,692
+sao jose dos campos,691
+fortaleza,654
+sorocaba,633
+recife,613
+florianopolis,570
+jundiai,565
+ribeirao preto,510
+belem,447
+nova iguacu,442
+barueri,433
+juiz de fora,427
+contagem,426
+sao goncalo,409
+mogi das cruzes,383
+vitoria,380
+uberlandia,374
+piracicaba,369
+sao luis,353
+sao jose do rio preto,335
+vila velha,334
+carapicuiba,328
+maua,323
+campo grande,320
+praia grande,316
+londrina,306
+taboao da serra,296
+diadema,286
+serra,285
+teresina,281
+indaiatuba,280
+sao caetano do sul,277
+bauru,273
+maringa,271
+taubate,270
+duque de caxias,266
+joinville,264
+joao pessoa,256
+cotia,250
+cuiaba,248
+maceio,247
+sao carlos,241
+petropolis,240
+macae,239
+campos dos goytacazes,238
+suzano,234
+volta redonda,232
+guaruja,226
+aracaju,225
+americana,224
+caxias do sul,224
+montes claros,211
+canoas,210
+natal,207
+betim,203
+santa maria,197
+marilia,196
+jacarei,194
+uberaba,191
+limeira,190
+blumenau,188
+pelotas,186
+feira de santana,185
+santana de parnaiba,185
+valinhos,183
+sumare,183
+itaquaquecetuba,172
+ipatinga,171
+itapevi,170
+sao jose,169
+embu das artes,165
+sao vicente,165
+presidente prudente,161
+franca,161
+atibaia,159
+rio claro,157
+araraquara,155
+cascavel,153
+nova friburgo,152
+braganca paulista,146
+hortolandia,145
+ponta grossa,143
+aracatuba,141
+governador valadares,141
+manaus,140
+cariacica,139
+marica,139
+divinopolis,137
+rio das ostras,137
+itu,136
+jaboatao dos guararapes,135
+sao joao de meriti,134
+sao jose dos pinhais,133
+pouso alegre,131
+paulinia,130
+sete lagoas,128
+rio grande,125
+novo hamburgo,123
+barra mansa,123
+pocos de caldas,122
+cachoeiro de itapemirim,122
+teresopolis,120
+itajai,120
+santa barbara d'oeste,119
+cabo frio,117
+resende,117
+anapolis,113
+porto velho,113
+passo fundo,113
+gravatai,112
+mage,111
+belford roxo,111
+ferraz de vasconcelos,111
+aparecida de goiania,110
+palmas,110
+franco da rocha,109
+ribeirao pires,109
+nilopolis,107
+sao leopoldo,105
+chapeco,103
+caieiras,102
+pindamonhangaba,101
+ribeirao das neves,101
+botucatu,101
+cajamar,101
+francisco morato,100
+patos de minas,100
+santa luzia,100
+balneario camboriu,100
+itapecerica da serra,98
+nova lima,98
+guaratingueta,98
+itatiba,97
+palhoca,95
+vinhedo,95
+salto,95
+araras,94
+itajuba,94
+olinda,93
+criciuma,93
+mogi-guacu,93
+vitoria da conquista,92
+vicosa,91
+jaragua do sul,89
+varginha,89
+caraguatatuba,89
+ananindeua,88
+foz do iguacu,87
+votorantim,85
+lages,85
+poa,85
+angra dos reis,85
+jandira,85
+conselheiro lafaiete,84
+assis,84
+lavras,83
+lorena,83
+sao joao da boa vista,82
+itanhaem,80
+ourinhos,80
+barbacena,80
+varzea paulista,80
+itabira,79
+birigui,79
+cubatao,79
+sao roque,79
+itapetininga,78
+araxa,78
+araruama,77
+mogi mirim,76
+ubatuba,76
+mesquita,76
+catanduva,75
+tatui,75
+lauro de freitas,75
+teofilo otoni,75
+mairipora,75
+cacapava,74
+rio branco,74
+jau,74
+viamao,73
+barretos,73
+ilheus,72
+cachoeirinha,72
+toledo,71
+pinhais,69
+aruja,69
+pirassununga,69
+campina grande,68
+sao joao del rei,67
+amparo,67
+rio verde,67
+guarapari,67
+rondonopolis,65
+colatina,65
+petrolina,65
+linhares,65
+bage,65
+manhuacu,65
+guarapuava,65
+avare,64
+muriae,64
+caruaru,64
+dourados,64
+parnamirim,63
+paracatu,63
+votuporanga,63
+valenca,63
+itabuna,62
+sertaozinho,62
+caratinga,62
+jaguariuna,62
+colombo,62
+santa cruz do sul,62
+camacari,61
+sao sebastiao,61
+brusque,60
+paranagua,60
+itaborai,60
+tubarao,60
+lagoa santa,60
+erechim,58
+itapeva,58
+ouro preto,57
+itauna,57
+campo mourao,56
+ituiutaba,56
+bento goncalves,56
+cruzeiro,56
+alvorada,56
+itapira,55
+lins,55
+araucaria,54
+araguari,54
+queimados,54
+jaboticabal,54
+timoteo,54
+unai,54
+macapa,54
+barra do pirai,54
+jatai,54
+uba,53
+tupa,53
+pato branco,53
+fernandopolis,53
+ijui,52
+cosmopolis,52
+matao,52
+francisco beltrao,52
+barreiras,52
+apucarana,52
+joao monlevade,51
+nova serrana,51
+lajeado,51
+bebedouro,51
+concordia,50
+boituva,50
+registro,50
+leme,50
+ibirite,50
+bertioga,49
+itaguai,48
+uruguaiana,48
+sao mateus,48
+campo limpo paulista,48
+patrocinio,47
+videira,47
+paranavai,47
+itaperuna,47
+saquarema,47
+sao pedro da aldeia,46
+ilhabela,46
+santo angelo,46
+sinop,46
+embu-guacu,46
+boa vista,45
+sao bento do sul,45
+lencois paulista,45
+vespasiano,45
+itupeva,44
+santarem,44
+extrema,44
+vargem grande paulista,44
+curvelo,44
+peruibe,44
+juazeiro,44
+louveira,44
+itapema,44
+sao jose do rio pardo,44
+passos,43
+alfenas,43
+guaira,43
+andradina,43
+artur nogueira,43
+tres coracoes,43
+varzea grande,42
+tres lagoas,42
+paulista,42
+sabara,42
+mongagua,42
+pirapora,42
+aracruz,41
+umuarama,41
+esteio,41
+porto seguro,41
+ponte nova,41
+coronel fabriciano,41
+araguaina,41
+ouro branco,41
+alagoinhas,40
+cacador,40
+sapucaia do sul,40
+monte mor,40
+paulo afonso,40
+tres rios,40
+pedro leopoldo,40
+sao miguel do oeste,40
+imperatriz,40
+bom despacho,39
+cianorte,39
+olimpia,38
+guanambi,38
+tremembe,38
+capao da canoa,38
+nova odessa,38
+eunapolis,38
+mossoro,37
+para de minas,37
+tiete,37
+penapolis,37
+campo largo,37
+vassouras,37
+valparaiso de goias,37
+guaxupe,37
+sobral,36
+caldas novas,36
+pedreira,36
+itumbiara,36
+adamantina,36
+sao sebastiao do paraiso,36
+jequie,36
+luis eduardo magalhaes,36
+campo bom,36
+alegrete,36
+rio do sul,35
+telemaco borba,35
+maracanau,35
+santa rita do sapucai,35
+capivari,35
+camaragibe,35
+almirante tamandare,35
+arapongas,35
+caucaia,35
+santa cruz do rio pardo,35
+santa fe do sul,35
+osorio,35
+paracambi,35
+imbituba,34
+formosa,34
+juazeiro do norte,34
+catalao,34
+sao joaquim da barra,34
+mococa,34
+japeri,34
+sao lourenco,34
+monte alto,34
+santa rosa,33
+luziania,33
+cruz alta,33
+cataguases,33
+seropedica,33
+mariana,33
+taquaritinga,33
+promissao,32
+santo antonio de padua,32
+montenegro,32
+itabirito,32
+cachoeira do sul,32
+formiga,32
+navegantes,31
+marechal candido rondon,31
+garanhuns,31
+guaiba,31
+ibiuna,31
+gramado,30
+congonhas,30
+santo antonio de jesus,30
+ituverava,30
+cerquilho,30
+tijucas,30
+jales,30
+gaspar,30
+santa isabel,30
+arapiraca,29
+teixeira de freitas,29
+orlandia,29
+uniao da vitoria,29
+barra bonita,29
+arraial do cabo,29
+armacao dos buzios,29
+itarare,29
+mirassol,29
+fazenda rio grande,29
+xanxere,29
+alem paraiba,29
+garca,28
+piumhii,28
+trindade,28
+camboriu,28
+batatais,28
+capao bonito,28
+dois vizinhos,28
+porto ferreira,28
+farroupilha,28
+primavera do leste,28
+itapolis,28
+rio bonito,28
+miguel pereira,28
+mafra,28
+corumba,28
+dracena,28
+matinhos,27
+parauapebas,27
+canoinhas,27
+cambe,27
+diamantina,27
+carangola,27
+caete,27
+rolandia,27
+brumadinho,26
+venancio aires,26
+santiago,26
+viana,26
+frutal,26
+mineiros,26
+rio grande da serra,26
+indaial,26
+sapiranga,26
+joacaba,26
+campos do jordao,26
+santa barbara,26
+presidente venceslau,26
+cachoeira paulista,25
+aparecida,25
+caceres,25
+nanuque,25
+arcos,25
+barra do garcas,25
+biguacu,25
+tramandai,25
+mairinque,25
+coromandel,25
+altamira,25

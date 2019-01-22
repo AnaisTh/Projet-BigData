@@ -1,0 +1,637 @@
+Etat,Ville,nbVendeurs
+São Paulo,sao paulo,694
+Paraná,curitiba,124
+Rio de Janeiro,rio de janeiro,93
+Minas Gerais,belo horizonte,66
+São Paulo,ribeirao preto,52
+São Paulo,guarulhos,50
+São Paulo,ibitinga,49
+São Paulo,santo andre,45
+São Paulo,campinas,41
+Paraná,maringa,40
+São Paulo,sao jose do rio preto,33
+São Paulo,sao bernardo do campo,32
+São Paulo,sorocaba,32
+São Paulo,osasco,32
+District fédéral,brasilia,28
+Rio Grande do Sul,porto alegre,27
+Paraná,londrina,25
+Goiás,goiania,23
+Santa Catarina,joinville,22
+São Paulo,franca,20
+São Paulo,sao caetano do sul,20
+Santa Catarina,blumenau,20
+São Paulo,sao jose dos campos,18
+Santa Catarina,florianopolis,17
+São Paulo,limeira,17
+São Paulo,santos,16
+Rio Grande do Sul,caxias do sul,16
+São Paulo,marilia,15
+São Paulo,mogi das cruzes,15
+Paraná,cascavel,14
+São Paulo,jundiai,14
+São Paulo,bauru,14
+São Paulo,maua,13
+São Paulo,sao carlos,13
+São Paulo,barueri,13
+Minas Gerais,contagem,12
+Minas Gerais,uberlandia,12
+São Paulo,rio claro,12
+São Paulo,piracicaba,12
+São Paulo,presidente prudente,12
+São Paulo,araraquara,11
+São Paulo,atibaia,11
+Santa Catarina,brusque,10
+São Paulo,americana,10
+São Paulo,catanduva,10
+São Paulo,cotia,10
+São Paulo,taboao da serra,10
+São Paulo,birigui,10
+São Paulo,carapicuiba,10
+Paraná,arapongas,10
+São Paulo,praia grande,10
+São Paulo,porto ferreira,9
+São Paulo,diadema,9
+São Paulo,santana de parnaiba,9
+Paraná,sao jose dos pinhais,9
+Rio Grande do Sul,canoas,9
+São Paulo,itaquaquecetuba,9
+Minas Gerais,juiz de fora,9
+São Paulo,salto,9
+São Paulo,pedreira,9
+Santa Catarina,jaragua do sul,9
+Rio de Janeiro,niteroi,8
+São Paulo,mogi guacu,8
+São Paulo,assis,8
+Minas Gerais,divinopolis,8
+Paraná,colombo,8
+Paraná,toledo,8
+Santa Catarina,itajai,8
+São Paulo,indaiatuba,8
+Paraná,apucarana,8
+Rio de Janeiro,sao goncalo,7
+Santa Catarina,palhoca,7
+São Paulo,valinhos,7
+São Paulo,sao roque,7
+Paraná,pinhais,7
+Bahia,salvador,7
+Ceará,fortaleza,7
+São Paulo,jacarei,7
+Paraná,fazenda rio grande,6
+Rio de Janeiro,petropolis,6
+São Paulo,ribeirao pires,6
+Minas Gerais,uba,6
+Minas Gerais,claudio,6
+São Paulo,guaruja,6
+São Paulo,taubate,6
+Paraná,ponta grossa,6
+Rio Grande do Sul,novo hamburgo,6
+Minas Gerais,santa rita do sapucai,6
+São Paulo,lencois paulista,6
+Santa Catarina,sao jose,5
+Paraná,foz do iguacu,5
+Minas Gerais,betim,5
+São Paulo,penapolis,5
+Pernambuco,recife,5
+Rio de Janeiro,nova iguacu,5
+São Paulo,sumare,5
+Rio de Janeiro,nova friburgo,5
+São Paulo,amparo,5
+Rio Grande do Sul,lajeado,5
+Minas Gerais,pocos de caldas,5
+São Paulo,braganca paulista,5
+Santa Catarina,tubarao,5
+Minas Gerais,varginha,4
+São Paulo,garca,4
+Minas Gerais,araguari,4
+Espírito Santo,vila velha,4
+Minas Gerais,borda da mata,4
+São Paulo,sp,4
+São Paulo,botucatu,4
+São Paulo,itatiba,4
+Santa Catarina,rio do sul,4
+Mato Grosso do Sul,campo grande,4
+Santa Catarina,criciuma,4
+Espírito Santo,cachoeiro de itapemirim,4
+São Paulo,itu,4
+São Paulo,santa barbara d'oeste,4
+São Paulo,votuporanga,4
+São Paulo,paulinia,4
+São Paulo,barretos,4
+Rio de Janeiro,barra mansa,4
+Espírito Santo,vitoria,4
+São Paulo,mirassol,4
+Minas Gerais,formiga,4
+São Paulo,votorantim,4
+Minas Gerais,sete lagoas,4
+São Paulo,jaci,4
+São Paulo,itapecerica da serra,4
+São Paulo,jaguariuna,4
+São Paulo,fernandopolis,4
+São Paulo,tupa,4
+São Paulo,aracatuba,4
+São Paulo,itapevi,4
+Paraná,francisco beltrao,4
+Paraná,umuarama,4
+São Paulo,jau,4
+São Paulo,capivari,4
+Rio Grande do Sul,venancio aires,3
+São Paulo,batatais,3
+São Paulo,aruja,3
+Rio Grande do Sul,santa maria,3
+São Paulo,sao paulo - sp,3
+São Paulo,artur nogueira,3
+Santa Catarina,sao bento do sul,3
+Paraná,campo largo,3
+Paraná,rolandia,3
+São Paulo,serra negra,3
+Minas Gerais,conselheiro lafaiete,3
+São Paulo,tatui,3
+São Paulo,curitiba,3
+São Paulo,araras,3
+Paraná,loanda,3
+São Paulo,osvaldo cruz,3
+Paraná,santa terezinha de itaipu,3
+Rio Grande do Sul,cachoeirinha,3
+Rio Grande do Sul,bento goncalves,3
+São Paulo,suzano,3
+São Paulo,pompeia,3
+São Paulo,mogi mirim,3
+Espírito Santo,serra,3
+Minas Gerais,tres coracoes,3
+Rio de Janeiro,macae,3
+Rio Grande do Sul,carazinho,3
+Goiás,anapolis,3
+Goiás,morrinhos,3
+Rio de Janeiro,sao joao de meriti,3
+Paraná,sarandi,3
+Rio Grande do Sul,pelotas,3
+Paraná,guaratuba,3
+Santa Catarina,navegantes,3
+São Paulo,boituva,3
+Santa Catarina,balneario camboriu,3
+São Paulo,vargem grande do sul,3
+São Paulo,ferraz de vasconcelos,3
+Minas Gerais,uberaba,3
+São Paulo,laranjal paulista,3
+Paraná,cambe,3
+Minas Gerais,montes claros,3
+Rio de Janeiro,duque de caxias,3
+São Paulo,tabatinga,3
+Rio de Janeiro,mesquita,3
+Santa Catarina,treze tilias,2
+Minas Gerais,dores de campos,2
+Rio de Janeiro,armacao dos buzios,2
+São Paulo,registro,2
+São Paulo,itajobi,2
+São Paulo,tanabi,2
+São Paulo,cosmopolis,2
+Santa Catarina,timbo,2
+Santa Catarina,sombrio,2
+Santa Catarina,curitibanos,2
+Rio Grande do Sul,sao leopoldo,2
+São Paulo,jaboticabal,2
+São Paulo,belo horizonte,2
+Goiás,formosa,2
+Santa Catarina,gaspar,2
+Santa Catarina,xanxere,2
+Rio de Janeiro,belford roxo,2
+Santa Catarina,laurentino,2
+Minas Gerais,sao joao del rei,2
+São Paulo,embu das artes,2
+São Paulo,caxias do sul,2
+Minas Gerais,patos de minas,2
+São Paulo,conchal,2
+Rio Grande do Sul,campo bom,2
+Santa Catarina,lages,2
+São Paulo,echapora,2
+São Paulo,cafelandia,2
+Santa Catarina,indaial,2
+São Paulo,bady bassitt,2
+Minas Gerais,ipatinga,2
+Bahia,lauro de freitas,2
+São Paulo,itajai,2
+Minas Gerais,coronel fabriciano,2
+Rio Grande do Sul,flores da cunha,2
+São Paulo,franco da rocha,2
+Rio Grande do Sul,viamao,2
+Minas Gerais,ribeirao das neves,2
+São Paulo,lorena,2
+São Paulo,hortolandia,2
+Minas Gerais,araxa,2
+Paraïba,joao pessoa,2
+São Paulo,cajamar,2
+Espírito Santo,cariacica,2
+Minas Gerais,baependi,2
+Paraná,pitanga,2
+Pernambuco,caruaru,2
+Santa Catarina,videira,2
+Rio de Janeiro,teresopolis,2
+Santa Catarina,imbituba,2
+Paraná,pato branco,2
+São Paulo,pradopolis,2
+São Paulo,nova odessa,2
+Santa Catarina,paulo lopes,2
+Minas Gerais,vicosa,2
+Minas Gerais,itauna,2
+São Paulo,bariri,2
+Santa Catarina,porto belo,2
+Rio Grande do Norte,natal,2
+Minas Gerais,tiradentes,2
+Paraná,araucaria,2
+Santa Catarina,chapeco,2
+São Paulo,sao jose do rio pardo,2
+Paraná,castro,2
+Santa Catarina,sao ludgero,2
+Minas Gerais,jacutinga,2
+Rio Grande do Sul,farroupilha,2
+São Paulo,mairipora,2
+Rio Grande do Sul,montenegro,2
+Rio Grande do Sul,santa rosa,2
+São Paulo,itapetininga,2
+Rio Grande do Sul,estancia velha,2
+São Paulo,santa barbara d´oeste,2
+Santa Catarina,jaguaruna,2
+Mato Grosso,cuiaba,2
+Goiás,uruacu,2
+Minas Gerais,lagoa da prata,2
+Santa Catarina,garopaba,2
+Paraná,itaipulandia,2
+São Paulo,dois corregos,2
+Santa Catarina,rodeio,2
+Santa Catarina,canoinhas,2
+São Paulo,igaracu do tiete,2
+Minas Gerais,alfenas,2
+São Paulo,rio de janeiro,2
+Rio de Janeiro,nilopolis,2
+São Paulo,sao pedro,2
+São Paulo,campo limpo paulista,2
+São Paulo,novo horizonte,1
+São Paulo,sao bernardo do capo,1
+São Paulo,ao bernardo do campo,1
+São Paulo,sao paluo,1
+Paraná,cascavael,1
+Santa Catarina,camboriu,1
+São Paulo,sao paulop,1
+Bahia,porto seguro,1
+São Paulo,macatuba,1
+São Paulo,blumenau,1
+São Paulo,leme,1
+São Paulo,varzea paulista,1
+Rio de Janeiro,campos dos goytacazes,1
+Santa Catarina,concordia,1
+Santa Catarina,ararangua,1
+São Paulo,jambeiro,1
+Mato Grosso,sinop,1
+São Paulo,sao paulo / sao paulo,1
+São Paulo,vargem grande paulista,1
+Minas Gerais,ibia,1
+Mato Grosso,jaciara,1
+São Paulo,holambra,1
+São Paulo,sao  paulo,1
+Santa Catarina,pinhalzinho,1
+Rio Grande do Sul,bage,1
+Santa Catarina,nova trento,1
+São Paulo,vila velha,1
+São Paulo,taruma,1
+São Paulo,pirassununga,1
+São Paulo,santa maria da serra,1
+Santa Catarina,itapema,1
+São Paulo,sertanopolis,1
+São Paulo,ipaussu,1
+São Paulo,sao paulo sp,1
+Rio de Janeiro,aperibe,1
+São Paulo,socorro,1
+Minas Gerais,caratinga,1
+Santa Catarina,sao francisco do sul,1
+São Paulo,caieiras,1
+Paraná,japira,1
+São Paulo,s jose do rio preto,1
+Rio Grande do Sul,cachoeira do sul,1
+Rio de Janeiro,rio de janeiro \rio de janeiro,1
+Bahia,feira de santana,1
+Rio de Janeiro,angra dos reis rj,1
+Ceará,caucaia,1
+District fédéral,gama,1
+São Paulo,brotas,1
+Rio de Janeiro,saquarema,1
+Rio Grande do Sul,jacutinga,1
+São Paulo,sao joaquim da barra,1
+Bahia,barro alto,1
+São Paulo,monte alto,1
+Paraná,entre rios do oeste,1
+Paraná,bandeirantes,1
+Rio Grande do Sul,portao,1
+Minas Gerais,castro pires,1
+São Paulo,sao joao da boa vista,1
+Pará,marechal candido rondon,1
+Paraná,california,1
+São Paulo,orlandia,1
+Rio de Janeiro,itaborai,1
+Espírito Santo,colatina,1
+São Paulo,pirituba,1
+São Paulo,ferraz de  vasconcelos,1
+São Paulo,itapeva,1
+Paraná,cianorte,1
+Santa Catarina,cacador,1
+Minas Gerais,prados,1
+São Paulo,londrina,1
+Minas Gerais,monte siao,1
+Rio Grande do Sul,ivoti,1
+Minas Gerais,guanhaes,1
+São Paulo,tiete,1
+São Paulo,nhandeara,1
+São Paulo,mombuca,1
+Rio de Janeiro,paracambi,1
+São Paulo,sao sebastiao da grama/sp,1
+Rio de Janeiro,"rio de janeiro, rio de janeiro, brasil",1
+São Paulo,pilar do sul,1
+Mato Grosso do Sul,coxim,1
+Maranhão,sao luis,1
+Santa Catarina,balenario camboriu,1
+São Paulo,alambari,1
+São Paulo,pinhais,1
+Goiás,aparecida de goiania,1
+Rio Grande do Sul,torres,1
+São Paulo,olimpia,1
+São Paulo,garulhos,1
+Minas Gerais,minas gerais,1
+Santa Catarina,picarras,1
+São Paulo,fernando prestes,1
+Minas Gerais,vespasiano,1
+Minas Gerais,congonhas,1
+Santa Catarina,campos novos,1
+Paraná,mandaguacu,1
+Bahia,irece,1
+Santa Catarina,rio do oeste,1
+Paraná,colorado,1
+Rio Grande do Sul,ronda alta,1
+São Paulo,monteiro lobato,1
+São Paulo,presidente epitacio,1
+São Paulo,guaratingueta,1
+Minas Gerais,belo horizont,1
+São Paulo,guaira,1
+São Paulo,descalvado,1
+Bahia,ilheus,1
+São Paulo,maua/sao paulo,1
+São Paulo,ipira,1
+Rio Grande do Sul,santo antonio da patrulha,1
+São Paulo,jales,1
+Rio de Janeiro,volta redonda,1
+Rio Grande do Sul,rio grande,1
+São Paulo,tabao da serra,1
+Rio Grande do Sul,arvorezinha,1
+São Paulo,barrinha,1
+São Paulo,rio das pedras,1
+Paraná,sao jose dos pinhas,1
+São Paulo,palhoca,1
+São Paulo,portoferreira,1
+São Paulo,riberao preto,1
+Rio Grande do Sul,horizontina,1
+São Paulo,poa,1
+São Paulo,volta redonda,1
+Minas Gerais,extrema,1
+São Paulo,embu guacu,1
+Minas Gerais,pouso alegre,1
+Rio de Janeiro,mage,1
+Paraná,ampere,1
+Santa Catarina,braco do norte,1
+São Paulo,vicente de carvalho,1
+Minas Gerais,barbacena/ minas gerais,1
+São Paulo,chapeco,1
+Paraná,jussara,1
+São Paulo,bofete,1
+São Paulo,cerqueira cesar,1
+Rio de Janeiro,rio de janeiro / rio de janeiro,1
+Rio Grande do Sul,imbe,1
+São Paulo,mococa,1
+Santa Catarina,sao miguel do oeste,1
+Espírito Santo,muqui,1
+Paraná,palotina,1
+Paraná,paincandu,1
+Ceará,juzeiro do norte,1
+Paraná,terra boa,1
+Espírito Santo,viana,1
+Minas Gerais,arinos,1
+Minas Gerais,ilicinea,1
+São Paulo,serrana,1
+São Paulo,sao jose dos pinhais,1
+Minas Gerais,guiricema,1
+Paraná,sao  jose dos pinhais,1
+Bahia,ipira,1
+São Paulo,porto alegre,1
+Paraná,floresta,1
+Rondônia,porto velho,1
+Minas Gerais,fronteira,1
+São Paulo,aparecida,1
+Rio de Janeiro,santo antonio de padua,1
+São Paulo,guariba,1
+Rio de Janeiro,marica,1
+São Paulo,mirandopolis,1
+São Paulo,pedregulho,1
+Minas Gerais,andradas,1
+Goiás,rio verde,1
+São Paulo,marechal candido rondon,1
+Paraïba,serra redonda,1
+São Paulo,mairinque,1
+Rio Grande do Sul,parai,1
+São Paulo,miguelopolis,1
+São Paulo,carapicuiba / sao paulo,1
+Rio de Janeiro,04482255,1
+Paraná,campo mourao,1
+Minas Gerais,lambari,1
+Santa Catarina,santa cecilia,1
+São Paulo,auriflama,1
+Rio Grande do Sul,condor,1
+Rio Grande do Sul,sapiranga,1
+Piauí,teresina,1
+São Paulo,são paulo,1
+Santa Catarina,araquari,1
+São Paulo,monte alegre do sul,1
+Goiás,abadia de goias,1
+Paraná,campo magro,1
+Rio Grande do Sul,campina das missoes,1
+Santa Catarina,bombinhas,1
+Minas Gerais,ponte nova,1
+Paraná,paranavai,1
+Minas Gerais,camanducaia,1
+Rio Grande do Norte,messias targino,1
+Sergipe,aracaju,1
+Sergipe,neopolis,1
+Paraná,marechal candido rondon,1
+São Paulo,santo andre/sao paulo,1
+Santa Catarina,xaxim,1
+São Paulo,sao pauo,1
+District fédéral,brasilia df,1
+Rio de Janeiro,queimados,1
+Paraïba,mamanguape,1
+São Paulo,mogi das cruzes / sp,1
+Minas Gerais,divisa nova,1
+São Paulo,sp / sp,1
+Paraná,teixeira soares,1
+Pernambuco,vitoria de santo antao,1
+Santa Catarina,garuva,1
+Rio de Janeiro,rio bonito,1
+Minas Gerais,carmo do cajuru,1
+Rio Grande do Sul,nova petropolis,1
+São Paulo,ribeirao pretp,1
+Minas Gerais,congonhal,1
+Paraná,guaira,1
+Minas Gerais,barbacena,1
+São Paulo,pedrinhas paulista,1
+Rio Grande do Sul,paraiso do sul,1
+Rio Grande do Sul,triunfo,1
+São Paulo,pitangueiras,1
+São Paulo,scao jose do rio pardo,1
+Santa Catarina,barra velha,1
+Rio de Janeiro,sao pedro da aldeia,1
+São Paulo,ribeirao preto / sao paulo,1
+São Paulo,pinhalzinho,1
+São Paulo,santa rosa de viterbo,1
+Bahia,bahia,1
+Minas Gerais,cataguases,1
+São Paulo,itirapina,1
+Ceará,mucambo,1
+Rio de Janeiro,tres rios,1
+São Paulo,jarinu,1
+Bahia,arraial d'ajuda (porto seguro),1
+Minas Gerais,pedro leopoldo,1
+Rio Grande do Sul,tres coroas,1
+Minas Gerais,joao monlevade,1
+São Paulo,tambau,1
+São Paulo,auriflama/sp,1
+Santa Catarina,floranopolis,1
+Rio de Janeiro,resende,1
+Paraná,bocaiuva do sul,1
+Paraná,medianeira,1
+Paraïba,campina grande,1
+Santa Catarina,massaranduba,1
+São Paulo,cordeiropolis,1
+Espírito Santo,cariacica / es,1
+Rio Grande do Sul,imigrante,1
+Minas Gerais,sabara,1
+Rio Grande do Sul,igrejinha,1
+Rondônia,ji parana,1
+Rio de Janeiro,angra dos reis,1
+São Paulo,guara,1
+São Paulo,alvares machado,1
+Paraná,pinhalao,1
+São Paulo,juiz de fora,1
+São Paulo,sao sebastiao,1
+São Paulo,ourinhos,1
+Paraná,mandirituba,1
+Rio Grande do Sul,uruguaiana,1
+São Paulo,pederneiras,1
+São Paulo,santa barbara d oeste,1
+São Paulo,bom jesus dos perdoes,1
+São Paulo,avare,1
+Minas Gerais,timoteo,1
+Ceará,varzea alegre,1
+Minas Gerais,ouro preto,1
+Paraná,irati,1
+São Paulo,sando andre,1
+São Paulo,francisco morato,1
+Minas Gerais,carmo da mata,1
+Rio Grande do Sul,"novo hamburgo, rio grande do sul, brasil",1
+São Paulo,cruzeiro,1
+Minas Gerais,ouro fino,1
+São Paulo,andradas,1
+Minas Gerais,nova lima,1
+Paraná,pato bragado,1
+Minas Gerais,joao pinheiro,1
+São Paulo,bertioga,1
+São Paulo,louveira,1
+Paraná,formosa do oeste,1
+São Paulo,vera cruz,1
+São Paulo,sao jose do rio pret,1
+Ceará,pacatuba,1
+São Paulo,cravinhos,1
+Santa Catarina,sao miguel d'oeste,1
+Rio Grande do Sul,santo angelo,1
+São Paulo,jacarei / sao paulo,1
+Rio de Janeiro,bom jardim,1
+Paraná,almirante tamandare,1
+Santa Catarina,presidente getulio,1
+Rio Grande do Sul,santa cruz do sul,1
+São Paulo,florianopolis,1
+Santa Catarina,cordilheira alta,1
+São Paulo,robeirao preto,1
+Paraná,guarapuava,1
+Rio Grande do Sul,rolante,1
+Santa Catarina,lages - sc,1
+Paraná,imbituva,1
+São Paulo,itapui,1
+Rio Grande do Sul,soledade,1
+São Paulo,santo antonio de posse,1
+Minas Gerais,campo do meio,1
+Ceará,eusebio,1
+Minas Gerais,centro,1
+Minas Gerais,governador valadares,1
+São Paulo,ipua,1
+Minas Gerais,lagoa santa,1
+São Paulo,clementina,1
+Rio de Janeiro,vassouras,1
+Goiás,jaragua,1
+Rio Grande do Sul,erechim,1
+Santa Catarina,luiz alves,1
+Goiás,luziania,1
+São Paulo,rio bonito,1
+Minas Gerais,campanha,1
+Santa Catarina,icara,1
+Paraná,marialva,1
+Paraïba,sao bento,1
+São Paulo,engenheiro coelho,1
+Espírito Santo,afonso claudio,1
+Minas Gerais,mateus leme,1
+Minas Gerais,itabira,1
+Amazonas,manaus,1
+São Paulo,mogi das cruses,1
+Santa Catarina,taio,1
+Minas Gerais,passos,1
+São Paulo,sbc,1
+Espírito Santo,domingos martins,1
+Bahia,eunapolis,1
+Pernambuco,brejao,1
+São Paulo,cananeia,1
+Rio Grande do Sul,tres de maio,1
+Rio Grande do Norte,rio de janeiro,1
+Rio de Janeiro,paraiba do sul,1
+São Paulo,tocantins,1
+Paraná,vendas@creditparts.com.br,1
+Rio Grande do Sul,alvorada,1
+Paraná,andira-pr,1
+São Paulo,aguas claras df,1
+Minas Gerais,muriae,1
+Santa Catarina,orleans,1
+Minas Gerais,itau de minas,1
+São Paulo,sbc/sp,1
+São Paulo,mineiros do tiete,1
+Santa Catarina,rio negrinho,1
+São Paulo,dracena,1
+Paraná,mandaguari,1
+Minas Gerais,janauba,1
+Rio Grande do Norte,parnamirim,1
+Minas Gerais,ibirite,1
+Goiás,santa terezinha de goias,1
+São Paulo,goioere,1
+São Paulo,bebedouro,1
+Goiás,piracanjuba,1
+São Paulo,buritama,1
+Bahia,guanambi,1
+São Paulo,laguna,1
+Paraná,parana,1
+São Paulo,guaimbe,1
+São Paulo,sao vicente,1
+Acre,rio branco,1
+Minas Gerais,bonfinopolis de minas,1
+Santa Catarina,santa catarina,1
+Minas Gerais,oliveira,1
+São Paulo,ubatuba,1
+Rio Grande do Sul,ipe,1
+São Paulo,presidente bernardes,1
+São Paulo,marapoama,1
+Paraná,cornelio procopio,1
+Paraná,uniao da vitoria,1
+São Paulo,laranjeiras do sul,1
+Paraná,pinhais/pr,1
+São Paulo,itaporanga,1
