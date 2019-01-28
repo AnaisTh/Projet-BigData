@@ -8,7 +8,7 @@
 
 //Repertoire dans lequel est stocké le projet
 //Path relatif au repertoire spark, ou absolu /!\ SI MODIFIE, LE CORRIGER DANS LA DERNIERE LIGNE
-val repertoireStockageProjet = "Projet-BigData/"
+val repertoireStockageProjet = "ProjetBigData_THIRIOT_Anais/"
 
 //Repertoire où se trouvent les données sources, chemins relatif au repertoire spark, ou absolu
 val repertoireDonneesSources = repertoireStockageProjet+"donnees/"
@@ -24,7 +24,7 @@ val repertoireSpark = "C:/spark/"
 
 
 //CORRIGER LE REPERTOIRE DE STOCKAGE DU PROJET
-:load "Projet-BigData/code/importsFonctions.scala"
+:load "ProjetBigData_THIRIOT_Anais/code/importsFonctions.scala"
 
 /***********************************************************************************************************************************************
 ************************************ SAUVEGARDE DES RESULTATS **********************************************************************************
