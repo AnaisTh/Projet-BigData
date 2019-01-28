@@ -1,4 +1,4 @@
-payment_type,nombreUtilisation,nbVersementsMoyenMode
+typePaiement,nombreUtilisation,nbVersementsMoyenMode
 credit_card,76795,3.507155413763917
 boleto,19784,1.0
 voucher,5775,1.0

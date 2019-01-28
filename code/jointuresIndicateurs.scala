@@ -1,19 +1,14 @@
+/***********************************************************************************************************************************************
+************************************  JOINTURES SUR LES ETATS **********************************************************************************
+************************************************************************************************************************************************/
 
 
-
-//initialisation d'une  liste pour stocker les temps d'execution des sauvegardes des résultats
-val liste = Array.empty[(String, Long)]
-
-/*
-JOINTURE DES DONNEES SUR LES ETATS 
-*/
-
-val nbCommandesParEtat = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/ETAT-nbCommandesParEtat.csv")
-val infosGeneralesCommandesEtats = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/ETAT-infosGeneralesCommandesEtats.csv")
-val noteMoyenneEtat = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/ETAT-noteMoyenneEtat.csv")
-val nbVendeursParEtat = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/ETAT-nbVendeursParEtat.csv")
-val nbVersementMoyenEtatCarte = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/ETAT-nbVersementMoyenEtatCarte.csv")
-val montantMoyenVersementEtatCarte = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/ETAT-montantMoyenVersementEtatCarte.csv")
+val nbCommandesParEtat = spark.read.format("csv").option("header", "true").load(repertoireResultats+"ETAT-nbCommandesParEtat.csv")
+val infosGeneralesCommandesEtats = spark.read.format("csv").option("header", "true").load(repertoireResultats+"ETAT-infosGeneralesCommandesEtats.csv")
+val noteMoyenneEtat = spark.read.format("csv").option("header", "true").load(repertoireResultats+"ETAT-noteMoyenneEtat.csv")
+val nbVendeursParEtat = spark.read.format("csv").option("header", "true").load(repertoireResultats+"ETAT-nbVendeursParEtat.csv")
+val nbVersementMoyenEtatCarte = spark.read.format("csv").option("header", "true").load(repertoireResultats+"ETAT-nbVersementMoyenEtatCarte.csv")
+val montantMoyenVersementEtatCarte = spark.read.format("csv").option("header", "true").load(repertoireResultats+"ETAT-montantMoyenVersementEtatCarte.csv")
 
 
 //Des left outer pour garder les valeurs nulls comme dans le cas des vendeurs
@@ -32,15 +27,15 @@ val indicateursEtats = indicateursEtatsTemp4.join(montantMoyenVersementEtatCarte
 val temp = liste.clone
 val liste = saveDfToCsv(indicateursEtats,"GLOBAL_indicateursEtats.csv",temp)
 
-/*
-JOINTURE DES DONNEES SUR LES VILLES 
-*/
+/***********************************************************************************************************************************************
+************************************  JOINTURES SUR LES VILLES *********************************************************************************
+************************************************************************************************************************************************/
 
-val nbCommandesParVille = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/VILLE-nbCommandesParVille.csv")
-val infosGeneralesCommandesVilles = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/VILLE-infosGeneralesCommandesVilles.csv")
-val noteMoyenneVille = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/VILLE-noteMoyenneVille.csv")
-val nbVendeursParVille = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/VILLE-nbVendeursParVille.csv")
-val localisationVilles =  spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/VILLE-localisationVilles.csv")
+val nbCommandesParVille = spark.read.format("csv").option("header", "true").load(repertoireResultats+"VILLE-nbCommandesParVille.csv")
+val infosGeneralesCommandesVilles = spark.read.format("csv").option("header", "true").load(repertoireResultats+"VILLE-infosGeneralesCommandesVilles.csv")
+val noteMoyenneVille = spark.read.format("csv").option("header", "true").load(repertoireResultats+"VILLE-noteMoyenneVille.csv")
+val nbVendeursParVille = spark.read.format("csv").option("header", "true").load(repertoireResultats+"VILLE-nbVendeursParVille.csv")
+val localisationVilles =  spark.read.format("csv").option("header", "true").load(repertoireResultats+"VILLE-localisationVilles.csv")
 	
 
 
@@ -57,29 +52,36 @@ val indicateursVilles = indicateursVillesTemp3.join(localisationVilles,
 val temp = liste.clone
 val liste = saveDfToCsv(indicateursVilles,"GLOBAL_indicateursVilles.csv",temp)
 
-/*
-JOINTURE DES DONNEES SUR LES CATEGORIES 
-*/
 
-val nbProduitsCategories = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/CATEGORIES-nbProduitsCategories.csv")
-val noteMoyenneCategorieProduit = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/CATEGORIES-noteMoyenneCategorieProduit.csv")
+/***********************************************************************************************************************************************
+************************************  JOINTURES SUR LES CATEGORIES *****************************************************************************
+************************************************************************************************************************************************/
+//Pour récuperer les informations selon un clustering particuleir
+val nbCluster = 14
+
+val informationsProduits = spark.read.format("csv").option("header", "true").load(repertoireResultats+"CATEGORIES-informationsProduitsClusters-"+nbCluster+".csv")
+val noteMoyenneCategorieProduit = spark.read.format("csv").option("header", "true").load(repertoireResultats+"CATEGORIES-noteMoyenneCategorieProduit.csv")
 
 //Des left outer pour garder les valeurs nulls comme dans le cas des vendeurs
-val indicateursCategorie = nbProduitsCategories.join(noteMoyenneCategorieProduit,
-	nbProduitsCategories.col("product_category_name_english")===noteMoyenneCategorieProduit.col("product_category_name_english"),"left_outer").drop(noteMoyenneCategorieProduit.col("product_category_name_english"))
+val indicateursCategorie = informationsProduits.join(noteMoyenneCategorieProduit,
+	informationsProduits.col("product_category_name_english")===noteMoyenneCategorieProduit.col("product_category_name_english"),"left_outer").
+drop(noteMoyenneCategorieProduit.col("product_category_name_english")).withColumnRenamed("product_category_name_english","nomProduit")
 
 val temp = liste.clone
 val liste = saveDfToCsv(indicateursCategorie,"GLOBAL_indicateursCategorie.csv",temp)
 
-/*
-JOINTURE DES DONNEES SUR LES TYPES DE PAIEMENTS 
-*/
-val nbUtilisationModePaiement = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/nbUtilisationModePaiement.csv")
-val nbVersementsMoyenMode = spark.read.format("csv").option("header", "true").load("Projet-BigData/résultats/nbVersementsMoyenMode.csv")
+
+/***********************************************************************************************************************************************
+************************************  JOINTURES SUR LES TYPES DE PAIEMENTS  ********************************************************************
+************************************************************************************************************************************************/
+
+
+val nbUtilisationModePaiement = spark.read.format("csv").option("header", "true").load(repertoireResultats+"PAIEMENT-nbUtilisationModePaiement.csv")
+val nbVersementsMoyenMode = spark.read.format("csv").option("header", "true").load(repertoireResultats+"PAIEMENT-nbVersementsMoyenMode.csv")
 
 //Des left outer pour garder les valeurs nulls comme dans le cas des vendeurs
 val indicateursTypesPaiements = nbUtilisationModePaiement.join(nbVersementsMoyenMode,
-	nbUtilisationModePaiement.col("payment_type")===nbVersementsMoyenMode.col("payment_type"),"left_outer").drop(nbVersementsMoyenMode.col("payment_type"))
+	nbUtilisationModePaiement.col("payment_type")===nbVersementsMoyenMode.col("payment_type"),"left_outer").drop(nbVersementsMoyenMode.col("payment_type")).withColumnRenamed("payment_type","typePaiement")
 
 val temp = liste.clone
 val liste = saveDfToCsv(indicateursTypesPaiements,"GLOBAL_indicateursTypesPaiements.csv",temp)
