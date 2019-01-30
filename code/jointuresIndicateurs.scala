@@ -9,6 +9,7 @@ val noteMoyenneEtat = spark.read.format("csv").option("header", "true").load(rep
 val nbVendeursParEtat = spark.read.format("csv").option("header", "true").load(repertoireResultats+"ETAT-nbVendeursParEtat.csv")
 val nbVersementMoyenEtatCarte = spark.read.format("csv").option("header", "true").load(repertoireResultats+"ETAT-nbVersementMoyenEtatCarte.csv")
 val montantMoyenVersementEtatCarte = spark.read.format("csv").option("header", "true").load(repertoireResultats+"ETAT-montantMoyenVersementEtatCarte.csv")
+val delaisMoyensEtats = spark.read.format("csv").option("header", "true").load(repertoireResultats+"ETAT-delaisMoyensEtats.csv")
 
 
 //Des left outer pour garder les valeurs nulls comme dans le cas des vendeurs
@@ -21,8 +22,10 @@ val indicateursEtatsTemp3 = indicateursEtatsTemp2.join(nbVendeursParEtat,
 
 val indicateursEtatsTemp4 = indicateursEtatsTemp3.join(nbVersementMoyenEtatCarte,
 	indicateursEtatsTemp3.col("Etat")===nbVersementMoyenEtatCarte.col("Etat"),"left_outer").drop(nbVersementMoyenEtatCarte.col("Etat"))
-val indicateursEtats = indicateursEtatsTemp4.join(montantMoyenVersementEtatCarte,
+val indicateursEtatsTemp5 = indicateursEtatsTemp4.join(montantMoyenVersementEtatCarte,
 	indicateursEtatsTemp4.col("Etat")===montantMoyenVersementEtatCarte.col("Etat"),"left_outer").drop(montantMoyenVersementEtatCarte.col("Etat"))
+val indicateursEtats = indicateursEtatsTemp5.join(delaisMoyensEtats,
+	indicateursEtatsTemp5.col("Etat")===delaisMoyensEtats.col("Etat"),"left_outer").drop(delaisMoyensEtats.col("Etat"))
 
 val temp = liste.clone
 val liste = saveDfToCsv(indicateursEtats,"GLOBAL_indicateursEtats.csv",temp)

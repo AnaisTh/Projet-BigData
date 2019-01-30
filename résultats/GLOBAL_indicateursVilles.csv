@@ -1,4 +1,4 @@
-Ville,nbCommandes,prixMoyenProduits,fraisMoyen,noteMoyenneEtat,Etat,nbVendeurs,latitudeVille,longitudeVille
+Ville,nbCommandes,prixMoyenProduits,fraisMoyen,noteMoyenneVille,Etat,nbVendeurs,latitudeVille,longitudeVille
 sao paulo,15540,124.32960264900932,16.575936891312782,4.139622641509434,São Paulo,694,-23.57086022590929,-46.633241779302736
 rio de janeiro,6882,145.23541995902812,23.660398009950157,3.8843488304937916,Rio Grande do Norte,1,-22.914910090595374,-43.31288271552523
 rio de janeiro,6882,145.23541995902812,23.660398009950157,3.8843488304937916,São Paulo,2,-22.914910090595374,-43.31288271552523

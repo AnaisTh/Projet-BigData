@@ -49,14 +49,24 @@ val eval = regEval.evaluate(predictions) // Erreur quadratique
 
 //On stocke les résultats
 val regressionPrixFrais = predictions.select(predictions("label").as("Frais"),predictions("prixProduits"),predictions("prediction").as("FraisPredits"))
+//On ajoute un id
+val regressionPrixFrais_Resultat = regressionPrixFrais.select("*").withColumn("id", monotonically_increasing_id())
+//On recupère les indicateurs
+val indicateurs = sc.parallelize(Seq((r2,eval))).toDF("r2","erreurQuadratique")
+
 val temp = liste.clone
-val liste = saveDfToCsv(regressionPrixFrais,"REGRESSION-regressionPrixFrais.csv",temp)
+val liste = saveDfToCsv(regressionPrixFrais_Resultat,"REGRESSION-regressionPrixFrais-resultat.csv",temp)
+val temp = liste.clone
+val liste = saveDfToCsv(indicateurs,"REGRESSION-regressionPrixFrais-indicateurs.csv",temp)
+
+
+/*
 
 
 /***********************************************************************************************************************************************
 ************************************  PRIX --> NOTE  -> Sur la moyenne sur les catégories *******************************************************
 ************************************************************************************************************************************************/
-
+PAS REPRESENTATIVE !!!!
 //On recupère la note de chaque produit -> quand une commande à plusieurs produits, la meme note est donnée à chaque produit
 
 val prixNoteCommandes = notePrixFraisCommandes.select(notePrixFraisCommandes("review_score").as("label"),notePrixFraisCommandes("prixProduits"))
@@ -93,8 +103,15 @@ val eval = regEval.evaluate(predictions)
 
 //On stocke les résultats
 val regressionPrixNote = predictions.select(predictions("label").as("Note"),predictions("prixProduits"),predictions("prediction").as("NotePrediction"))
+//On ajoute un id
+val regressionPrixNote_Resultat = regressionPrixNote.select("*").withColumn("id", monotonically_increasing_id())
+//On recupère les indicateurs
+val indicateurs = sc.parallelize(Seq((r2,eval))).toDF("r2","erreurQuadratique")
+
 val temp = liste.clone
-val liste = saveDfToCsv(regressionPrixNote,"REGRESSION-regressionPrixNote.csv",temp)
+val liste = saveDfToCsv(regressionPrixNote_Resultat,"REGRESSION-regressionPrixNote-resultat.csv",temp)
+val temp = liste.clone
+val liste = saveDfToCsv(indicateurs,"REGRESSION-regressionPrixNote-indicateurs.csv",temp)
 
 
-:load Projet-BigData\code\Fonctions-projets.scala
+*/

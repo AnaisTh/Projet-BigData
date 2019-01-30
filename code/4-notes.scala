@@ -3,7 +3,7 @@
 ************************************************************************************************************************************************/
 
 //Jointure avis - commande_client_localisation -> permet d'avoir les informations client des avis
-val avisCommandesClients = commande_client_localisation.join(avis,"order_id").coalesce(3)
+val avisCommandesClients = commandes_clients_localisation.join(avis,"order_id").coalesce(3)
 //Note moyenne donnée aux commandes 
 val noteMoyenne = avisCommandesClients.agg(
 	expr("avg(review_score) AS noteMoyenne")
@@ -13,7 +13,7 @@ val noteMoyenneEtat = avisCommandesClients.groupBy("Etat").agg(
 	expr("avg(review_score) AS noteMoyenneEtat")
 )
 val noteMoyenneVille = avisCommandesClients.groupBy("Ville").agg(
-	expr("avg(review_score) AS noteMoyenneEtat")
+	expr("avg(review_score) AS noteMoyenneVille")
 )
 val temp = liste.clone
 val liste = saveDfToCsv(noteMoyenne,"GENERAL-noteMoyenne.csv",temp)
