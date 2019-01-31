@@ -14,7 +14,7 @@ val repertoireStockageProjet = "ProjetBigData_THIRIOT_Anais/"
 val repertoireDonneesSources = repertoireStockageProjet+"donnees/"
 
 //Repertoire où doivent être stockés les résultats, chemins relatif au repertoire spark, ou absolu
-val repertoireResultats = repertoireStockageProjet+"résultats/"
+val repertoireResultats = repertoireStockageProjet+"resultats/"
 
 //Repertoire où se trouvent les fichiers de code
 val repertoireCode = repertoireStockageProjet+"code/"
