@@ -4,7 +4,7 @@
 ************************************************************************************************************************************************/
 
 //Jointure des paiements et des commandes 
-val paiementsCommandesClients = commande_client_localisation.join(paiements,"order_id").coalesce(3)
+val paiementsCommandesClients = commandes_clients_localisation.join(paiements,"order_id").coalesce(3)
 
 
 //Calcul du nombre d'utlisation de chaque mode de paiements
