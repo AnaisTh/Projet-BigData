@@ -27,8 +27,11 @@ val indicateursEtatsTemp5 = indicateursEtatsTemp4.join(montantMoyenVersementEtat
 val indicateursEtats = indicateursEtatsTemp5.join(delaisMoyensEtats,
 	indicateursEtatsTemp5.col("Etat")===delaisMoyensEtats.col("Etat"),"left_outer").drop(delaisMoyensEtats.col("Etat"))
 
+//Ajout de ratios : nombre de vendeurs par commandes par état
+val resultat = indicateursEtats.withColumn("nbVendeursParCommande",col("nbVendeurs").divide(col("nbCommandes")))
+
 val temp = liste.clone
-val liste = saveDfToCsv(indicateursEtats,"GLOBAL_indicateursEtats.csv",temp)
+val liste = saveDfToCsv(resultat,"GLOBAL_indicateursEtats.csv",temp)
 
 /***********************************************************************************************************************************************
 ************************************  JOINTURES SUR LES VILLES *********************************************************************************
@@ -37,10 +40,9 @@ val liste = saveDfToCsv(indicateursEtats,"GLOBAL_indicateursEtats.csv",temp)
 val nbCommandesParVille = spark.read.format("csv").option("header", "true").load(repertoireResultats+"VILLE-nbCommandesParVille.csv")
 val infosGeneralesCommandesVilles = spark.read.format("csv").option("header", "true").load(repertoireResultats+"VILLE-infosGeneralesCommandesVilles.csv")
 val noteMoyenneVille = spark.read.format("csv").option("header", "true").load(repertoireResultats+"VILLE-noteMoyenneVille.csv")
-val nbVendeursParVille = spark.read.format("csv").option("header", "true").load(repertoireResultats+"VILLE-nbVendeursParVille.csv")
+val nbVendeursParVille = spark.read.format("csv").option("header", "true").load(repertoireResultats+"VILLE-nbVendeursParVille.csv").drop("Etat")
 val localisationVilles =  spark.read.format("csv").option("header", "true").load(repertoireResultats+"VILLE-localisationVilles.csv")
 	
-
 
 //Des left outer pour garder les valeurs nulls comme dans le cas des vendeurs
 val indicateursVillesTemp = nbCommandesParVille.join(infosGeneralesCommandesVilles,
@@ -52,8 +54,11 @@ val indicateursVillesTemp3 = indicateursVillesTemp2.join(nbVendeursParVille,
 val indicateursVilles = indicateursVillesTemp3.join(localisationVilles,
 	indicateursVillesTemp3.col("Ville")===localisationVilles.col("geolocation_city"),"left_outer").drop(localisationVilles.col("geolocation_city"))
 
+//Ajout de ratios : nombre de vendeurs par commandes par ville
+val resultat = indicateursVilles.withColumn("nbVendeursParCommande",col("nbVendeurs").divide(col("nbCommandes")))
+
 val temp = liste.clone
-val liste = saveDfToCsv(indicateursVilles,"GLOBAL_indicateursVilles.csv",temp)
+val liste = saveDfToCsv(resultat,"GLOBAL_indicateursVilles.csv",temp)
 
 
 /***********************************************************************************************************************************************
@@ -70,8 +75,11 @@ val indicateursCategorie = informationsProduits.join(noteMoyenneCategorieProduit
 	informationsProduits.col("product_category_name_english")===noteMoyenneCategorieProduit.col("product_category_name_english"),"left_outer").
 drop(noteMoyenneCategorieProduit.col("product_category_name_english")).withColumnRenamed("product_category_name_english","nomProduit")
 
+//Ajout de ratios : nombre de vendeurs par commandes par categorie de produit
+val resultat = indicateursCategorie.withColumn("nbVendeursParCommande",col("nbVendeurs").divide(col("nbCommandes")))
+
 val temp = liste.clone
-val liste = saveDfToCsv(indicateursCategorie,"GLOBAL_indicateursCategorie.csv",temp)
+val liste = saveDfToCsv(resultat,"GLOBAL_indicateursCategorie.csv",temp)
 
 
 /***********************************************************************************************************************************************

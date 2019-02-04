@@ -10,14 +10,6 @@ agg(
 	expr("avg(freight_value) AS fraisMoyen")
 ).sort(desc("nbCommandes")).coalesce(3)
 
-/*
-//on cherche le nombre de vente moyen
-val venteMoyenne = nbProduitsCategoriesTemp.agg(avg("nbCommandes"))
-val limite = venteMoyenne.select(col("avg(nbCommandes)")).first.getDouble(0)
-//pour ne garder que les ventes au dessus de la moyenne (mieux qu'une valeur fixée aléatoirement)
-val nbProduitsCategories = nbProduitsCategoriesTemp.filter($"nbCommandes"> (limite))
-
-*/
 
 //rdd par défaut : 200 -> réduction à 3
 val nbVendeursCategories = (
@@ -82,7 +74,8 @@ val clustersProduits = resultatsPrediction.withColumnRenamed("prediction", "numC
 
 //On ajoute le nombre de produits du clusters à ses informations
 val nbProduitsCluster = clustersProduits.groupBy("numCluster").agg(expr("count(*) as nombreProduitsCluster"))
-val centresClustersJointure = centresClusters.join(nbProduitsCluster,"numCluster")
+
+val centresClustersJointure = centresClusters.join(nbProduitsCluster,"numCluster").withColumn("nbVendeursParCommande",col("centreNbVendeurs").divide(col("centreNbCommande")))
 
 //Enregistrement des résultats
 val temp = liste.clone
