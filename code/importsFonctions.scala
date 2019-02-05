@@ -85,6 +85,7 @@ def saveDfToCsv(df: DataFrame,
 }
 
 //Fonction permettant d'enregistrer la lsite des temps d'exécutions
+//saveTimes(liste)
 def saveTimes(liste : Array[(String,Long)]){
 	val times_df = sc.parallelize(liste).toDF("fichier","temps (sec)")
 	saveDfToCsv(times_df,"TEMPS.csv",liste)

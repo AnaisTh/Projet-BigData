@@ -1,4 +1,5 @@
-###Projet de BigData - Analyse de données Bresiliens###
+### Projet de BigData - Analyse de données Bresiliens ###
+## THIRIOT Anaïs M2 ACSI ##
 
 # Contenu #
 Ce projet contient différents repertoires :

@@ -1,6 +1,10 @@
 /***********************************************************************************************************************************************
-************************************  NOTES DES COMMANDES **************************************************************************************
+
+INFORMATIONS SUR LES NOTES DES COMMANDES
+Calcul des notes moyennes selon les villes et les états, mais aussi les notes des catégories
+
 ************************************************************************************************************************************************/
+
 
 //Jointure avis - commande_client_localisation -> permet d'avoir les informations client des avis
 val avisCommandesClients = commandes_clients_localisation.join(avis,"order_id").coalesce(3)

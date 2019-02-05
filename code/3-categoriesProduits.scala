@@ -1,6 +1,10 @@
 /***********************************************************************************************************************************************
-************************************  INFORMATIONS SUR LES PRODUITS DES COMMANDES **************************************************************
+
+INFORMATIONS SUR LES PRODUITS DES COMMANDES 
+Calcul du nombre de commande et du nombre de vendeurs selon les catégories de produits
+
 ************************************************************************************************************************************************/
+
 
 //Nombre de commandes par catégorie de produits, avec le prix moyen et les frais de ports moyens
 val nbProduitsCategories = produits_infos_commandes_clients_localisation_vendeurs.groupBy("product_category_name_english").
@@ -20,8 +24,13 @@ val nbVendeursCategories = (
 val infosCategories = nbProduitsCategories.join(nbVendeursCategories, "product_category_name_english").coalesce(3)
 
 
+
 /***********************************************************************************************************************************************
-************************************  CLUSTERING SUR LES PRODUITS ******************************************************************************
+
+CLUSTERING SUR LES PRODUITS
+Regroupements des produits selon différents critères : prix, frais, nombre de vendeurs, nombre de commandes
+Le tout sous forme de ratios pour une meilleure clusterisation
+
 ************************************************************************************************************************************************/
 
 

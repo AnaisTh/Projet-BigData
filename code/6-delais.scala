@@ -1,8 +1,10 @@
 /***********************************************************************************************************************************************
-************************************  ETUDE DES DELAIS ******************************************************************************************
+
+ETUDE DES DELAIS
+
 ************************************************************************************************************************************************/
 
-//Simple filtre crée une dataset
+//Mettre un simple filtre sur le dataframe crée une dataset donc passage par une vue SQL pour obtenir un DF plutot que de refaire des casts
 //val commandesLivrees = commandes.filter($"order_status" === "delivered")
 commandes_clients_localisation.createOrReplaceTempView("TEMPORAIRE")
 

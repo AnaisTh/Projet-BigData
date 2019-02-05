@@ -1,6 +1,7 @@
-
 /***********************************************************************************************************************************************
-************************************ INFORMATIONS SUR LES PAIEMENTS ****************************************************************************
+
+INFORMATIONS SUR LES PAIEMENTS
+
 ************************************************************************************************************************************************/
 
 //Jointure des paiements et des commandes 
@@ -19,7 +20,6 @@ val temp = liste.clone
 val liste = saveDfToCsv(nbUtilisationModePaiementEtat,"PAIEMENT-nbUtilisationModePaiementEtat.csv",temp)
 
 
-//Informations sur les montants des paiements
 //Nombre de versements moyen
 val nbVersementsMoyen = paiementsCommandesClients.agg(expr("avg(payment_installments) AS nbVersementsMoyen"))
 //Nombre de versements moyens selon les modes

@@ -1,5 +1,8 @@
 /***********************************************************************************************************************************************
-************************************ OUVERTURE DES DONNEES SOURCES *****************************************************************************
+
+OUVERTURE DES DONNEES SOURCES 
+Ce fichier permet de récuperer toutes les données sources selon le repertoire de stockage
+
 ************************************************************************************************************************************************/
 
 val clients = spark.read.format("csv").option("header", "true").load(repertoireDonneesSources+"olist_customers_dataset.csv").drop("customer_zip_code_prefix")
@@ -19,8 +22,12 @@ val produits = produitsEspagnols.join(produitsTraduction,"product_category_name"
 
 
 /***********************************************************************************************************************************************
-************************************  PREPARATION DES INFORMATIONS *****************************************************************************
+
+PREPARATION DES INFORMATIONS
+Préparation des jointures des fichiers sources pour effectuer les analyses par la suite
+
 ************************************************************************************************************************************************/
+
 //Jointure clients-etats -> Permet d'obtenir les noms des états exacts
 val clients_etats = clients.join(etats, col("customer_state")===col("code_etat")).drop("customer_state","code_etat").withColumnRenamed("customer_city","Ville")
 //Jointure clients-commandes -> Permet d'obtenir les clients ayant effectués chaque commande
@@ -37,11 +44,13 @@ val produits_infos_commandes_clients_localisation = infos_commandes_clients_loca
 //Jointure contenuCommande-produits-vendeurs
 val produits_infos_commandes_clients_localisation_vendeurs = produits_infos_commandes_clients_localisation.join(vendeurs_localisation.withColumnRenamed("Etat","EtatVendeur").withColumnRenamed("Ville","VilleVendeur"), "seller_id")
 
-
-
 /***********************************************************************************************************************************************
-************************************ INFORMATIONS SUR LES LOCALISATIONS DES VILLES *************************************************************
+
+LOCALISAITON DES VILLES
+Calcule d'une localisation moyenne des villes selon les latitudes/longitudes des zipcode des villes
+
 ************************************************************************************************************************************************/
+
 
 val localisationVilles = (geoloc.groupBy("geolocation_city","geolocation_state").agg(
 expr("avg(geolocation_lat) AS latitudeVille"),
@@ -49,7 +58,7 @@ expr("avg(geolocation_lng) AS longitudeVille")).
 sort(asc("geolocation_city")).coalesce(3)).
 join(etats,col("geolocation_state")===col("code_etat")).drop("code_etat","geolocation_state")
 
-
+//Sauvegarde pour réutilisation dans le reporting
 val temp = liste.clone
 val liste = saveDfToCsv(localisationVilles,"VILLE-localisationVilles.csv",temp)
 

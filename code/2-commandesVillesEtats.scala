@@ -1,6 +1,10 @@
 /***********************************************************************************************************************************************
-************************************  NOMBRE DE CLIENTS ET DE COMMANDES PAR VILLES ET ETATS *****************************************************
+
+NOMBRE DE CLIENTS ET DE COMMANDES PAR VILLES ET ETATS
+Calcul du nombre de commandes réalisées selon les villes et les états
+
 ************************************************************************************************************************************************/
+
 
 //Calcul du nombre de commandes par états
 val nbCommandesParEtat =  commandes_clients_localisation.groupBy("Etat").agg(expr("count(order_id) as nbCommandes")).sort(desc("nbCommandes"))
@@ -26,9 +30,11 @@ val liste =	saveDfToCsv(nbCommandesParVille,"VILLE-nbCommandesParVille.csv", tem
 val temp = liste.clone
 val liste = saveDfToCsv(nbCommandesParEtat,"ETAT-nbCommandesParEtat.csv",temp)
 
-
 /***********************************************************************************************************************************************
-************************************  INFORMATIONS GENERALES SUR LES COMMANDES *****************************************************************
+
+INFORMATIONS GENERALES SUR LES COMMANDES
+Calcul d'informations comme le prix et les frais des commandes, les prix par états, par villes
+
 ************************************************************************************************************************************************/
 
 // Recherche d'informations pour chaque commande : prix total des produits, frais total
@@ -59,6 +65,7 @@ agg(
 	expr("avg(fraisTotal) AS fraisMoyen")
 ).sort(desc("prixMoyenProduits"))
 
+
 //Enregistrement des résultats
 val temp = liste.clone
 val liste =	saveDfToCsv(infosGeneralesCommandes,"GENERAL-infosGeneralesCommandes.csv",temp)
@@ -66,4 +73,24 @@ val temp = liste.clone
 val liste = saveDfToCsv(infosGeneralesCommandesVilles,"VILLE-infosGeneralesCommandesVilles.csv",temp)
 val temp = liste.clone
 val liste = saveDfToCsv(infosGeneralesCommandesEtats,"ETAT-infosGeneralesCommandesEtats.csv",temp)
+
+
+/***********************************************************************************************************************************************
+
+INFORMATIONS SUR LES VENDEURS
+Calcul du nombre de vendeurs selon les villes et les états
+
+************************************************************************************************************************************************/
+
+val nbVendeursParVille =  vendeurs_localisation.groupBy("Etat","Ville").agg(expr("count(seller_id) as nbVendeurs")).sort(desc("nbVendeurs"))
+val nbVendeursParEtat =  vendeurs_localisation.groupBy("Etat").agg(expr("count(seller_id) as nbVendeurs")).sort(desc("nbVendeurs"))
+
+
+val temp = liste.clone
+val liste =	saveDfToCsv(nbVendeursParVille,"VILLE-nbVendeursParVille.csv",temp)
+val temp = liste.clone
+val liste = saveDfToCsv(nbVendeursParEtat,"ETAT-nbVendeursParEtat.csv",temp)
+
+
+
 
