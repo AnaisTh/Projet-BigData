@@ -6,10 +6,12 @@ Ce fichier permet de récuperer toutes les données sources selon le repertoire 
 ************************************************************************************************************************************************/
 
 val clients = spark.read.format("csv").option("header", "true").load(repertoireDonneesSources+"olist_customers_dataset.csv").drop("customer_zip_code_prefix")
-val commandes = spark.read.format("csv").option("header", "true").load(repertoireDonneesSources+"olist_orders_dataset.csv").drop("order_estimated_delivery_date","order_approved_at").
+val commandes = spark.read.format("csv").option("header", "true").load(repertoireDonneesSources+"olist_orders_dataset.csv").drop("order_approved_at").
 withColumnRenamed("order_purchase_timestamp","dateAchat").
 withColumnRenamed("order_delivered_carrier_date","dateValidationLogistique").
-withColumnRenamed("order_delivered_customer_date","dateLivraisonEffective")
+withColumnRenamed("order_delivered_customer_date","dateLivraisonEffective").
+withColumnRenamed("order_estimated_delivery_date","dateLivraisonEstimee")
+
 val etats = spark.read.format("csv").option("header", "true").load(repertoireDonneesSources+"abreviations_etats.csv")
 val infos = spark.read.format("csv").option("header", "true").load(repertoireDonneesSources+"olist_order_items_dataset.csv").drop("shipping_limit_date")
 val paiements = spark.read.format("csv").option("header", "true").load(repertoireDonneesSources+"olist_order_payments_dataset.csv")
@@ -44,6 +46,7 @@ val produits_infos_commandes_clients_localisation = infos_commandes_clients_loca
 //Jointure contenuCommande-produits-vendeurs
 val produits_infos_commandes_clients_localisation_vendeurs = produits_infos_commandes_clients_localisation.join(vendeurs_localisation.withColumnRenamed("Etat","EtatVendeur").withColumnRenamed("Ville","VilleVendeur"), "seller_id")
 
+
 /***********************************************************************************************************************************************
 
 LOCALISAITON DES VILLES
@@ -59,8 +62,8 @@ sort(asc("geolocation_city")).coalesce(3)).
 join(etats,col("geolocation_state")===col("code_etat")).drop("code_etat","geolocation_state")
 
 //Sauvegarde pour réutilisation dans le reporting
-val temp = liste.clone
-val liste = saveDfToCsv(localisationVilles,"VILLE-localisationVilles.csv",temp)
+//val temp = liste.clone
+//val liste = saveDfToCsv(localisationVilles,"VILLE-localisationVilles.csv",temp)
 
 
 

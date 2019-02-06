@@ -69,6 +69,43 @@ val nomRegression = "regressionMontantNbPaiement"
 val temp = liste.clone
 val liste = regression(data,features,label,nbDonneesEntrainement,nbDonneesTest,nomValeurPrediction,nomRegression,temp)
 
+
+/***********************************************************************************************************************************************/
+/* REGRESSION livraison --> note 
+Cette regression consiste à recherche un lien entre le respect de la date de livraison et la note donnée à la commande
+***********************************************************************************************************************************************/
+//Jointure entre les commandes et les avis
+val avisCommandesClients = commandes_clients_localisation.join(avis,"order_id").
+drop("customer_id","customer_unique_id","dateAchat","dateValidationLogistique","review_id","Etat","Ville","order_id").coalesce(3)
+
+//On ne garde que celles qui sont vraiment livrées
+avisCommandesClients.createOrReplaceTempView("TEMPORAIRE")
+val commandesLivrees  = sql("SELECT * FROM TEMPORAIRE WHERE order_status == 'delivered'")
+
+//On calcule la difference de date entre la livraison estimée et réelle
+val commandesLivreesDiffDate = commandesLivrees.
+withColumn("ecartLivraison", 
+	(unix_timestamp(commandesLivrees.col("dateLivraisonEffective")) - unix_timestamp(commandesLivrees.col("dateLivraisonEstimee")))/3600/24).
+withColumnRenamed("review_score","note").
+filter($"ecartLivraison">0)
+
+val data = commandesLivreesDiffDate.select(
+	commandesLivreesDiffDate("dateLivraisonEffective"),
+	commandesLivreesDiffDate("dateLivraisonEstimee"),
+	commandesLivreesDiffDate("ecartLivraison"),
+	commandesLivreesDiffDate("note").cast("Double")
+)
+
+val features = Array("ecartLivraison")
+val label = "note"
+val nbDonneesTest = 5000
+val nbDonneesEntrainement = 5000
+val nomValeurPrediction = "notePrediction"
+val nomRegression = "regressionEcartDelaiNote"
+val temp = liste.clone
+val liste = regression(data,features,label,nbDonneesEntrainement,nbDonneesTest,nomValeurPrediction,nomRegression,temp)
+
+
 /***********************************************************************************************************************************************
 
 FONCTION GENERIQUE A CHARGER
