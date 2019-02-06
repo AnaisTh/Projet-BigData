@@ -92,5 +92,31 @@ val temp = liste.clone
 val liste = saveDfToCsv(nbVendeursParEtat,"ETAT-nbVendeursParEtat.csv",temp)
 
 
+/***********************************************************************************************************************************************
+
+LOCALISAITON DES VILLES
+Calcule d'une localisation moyenne des villes selon les latitudes/longitudes des zipcode des villes
+
+************************************************************************************************************************************************/
+
+
+val localisationVilles = (geoloc.groupBy("geolocation_city","geolocation_state").agg(
+expr("avg(geolocation_lat) AS latitudeVille"),
+expr("avg(geolocation_lng) AS longitudeVille")).
+sort(asc("geolocation_city")).coalesce(3)).
+join(etats,col("geolocation_state")===col("code_etat")).drop("code_etat","geolocation_state")
+
+//Sauvegarde pour réutilisation dans le reporting
+val temp = liste.clone
+val liste = saveDfToCsv(localisationVilles,"VILLE-localisationVilles.csv",temp)
+
+
+
+
+
+
+
+
+
 
 
